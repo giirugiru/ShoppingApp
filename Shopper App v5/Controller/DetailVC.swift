@@ -23,7 +23,12 @@ class DetailVC: UIViewController {
     
     @IBOutlet weak var ProductDescriptionLabel: UILabel!
     
+    @IBOutlet weak var AddToCartButtonStyle: UIButton!
+    
+    
     @IBAction func AddToCartButton(_ sender: Any) {
+        
+        
         let ID = Int(selection)
         
         let alert = UIAlertController(title: "Add to cart", message: "Item Added to Cart!", preferredStyle: .alert)
@@ -42,15 +47,17 @@ class DetailVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        AddToCartButtonStyle.layer.cornerRadius = 10
+        
         print("Detail Screen Loaded")
         
         let ID = Int(selection)
         ProductImageView.image = UIImage(named: productName[ID!])
         ProductNameLabel.text = productName[ID!]
-        ProductPriceLabel.text = "\(productPrice[ID!])"
-        ProductCategoryLabel.text = productCategory[ID!]
-        ProductVariantLabel.text = productVariant[ID!]
+        ProductPriceLabel.text = "Rp. \(productPrice[ID!])"
+        ProductCategoryLabel.text = "Category: \(productCategory[ID!])"
+        ProductVariantLabel.text = "Variant: \(productVariant[ID!])"
         ProductDescriptionLabel.text = productDescription[ID!]
         ProductDescriptionLabel.sizeToFit()
                 

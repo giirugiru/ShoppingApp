@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--CategoryVC-->
+        <!--Category-->
         <scene sceneID="y5W-if-vwi">
             <objects>
                 <viewController id="Luz-6q-0wx" customClass="CategoryVC" customModule="Shopper_App_v5" customModuleProvider="target" sceneMemberID="viewController">
@@ -87,12 +87,18 @@
                             <constraint firstItem="gKe-PE-v3a" firstAttribute="top" secondItem="gCd-aX-2kA" secondAttribute="top" id="fjS-VR-GAF"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="R5a-n5-ZU4">
-                        <barButtonItem key="rightBarButtonItem" title="Cart" id="kpy-cW-Fbm">
-                            <connections>
-                                <segue destination="ho3-vS-fdd" kind="show" id="o5f-7z-kVa"/>
-                            </connections>
-                        </barButtonItem>
+                    <navigationItem key="navigationItem" title="Category" id="R5a-n5-ZU4">
+                        <rightBarButtonItems>
+                            <barButtonItem title="Cart" image="cart.fill" catalog="system" id="kpy-cW-Fbm">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <segue destination="ho3-vS-fdd" kind="show" id="o5f-7z-kVa"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Item" image="bell.fill" catalog="system" id="I6J-mP-7fA">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="CategoryCollectionView" destination="Pp8-Zl-3Yb" id="OII-m4-Ot4"/>
@@ -102,7 +108,7 @@
             </objects>
             <point key="canvasLocation" x="1752.1739130434785" y="357.58928571428572"/>
         </scene>
-        <!--HomeVC-->
+        <!--Home-->
         <scene sceneID="XTh-hL-tNW">
             <objects>
                 <viewController id="9rO-Wk-IxC" customClass="HomeVC" customModule="Shopper_App_v5" customModuleProvider="target" sceneMemberID="viewController">
@@ -193,12 +199,18 @@
                             <constraint firstItem="csv-mj-xBg" firstAttribute="top" secondItem="aIm-cr-wjF" secondAttribute="bottom" id="vta-lO-WVA"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="WgB-QC-eZO">
-                        <barButtonItem key="rightBarButtonItem" title="Cart" id="Cdo-aC-UVi">
-                            <connections>
-                                <segue destination="ho3-vS-fdd" kind="show" id="2gG-b1-GxA"/>
-                            </connections>
-                        </barButtonItem>
+                    <navigationItem key="navigationItem" title="Home" id="WgB-QC-eZO">
+                        <rightBarButtonItems>
+                            <barButtonItem title="Cart" image="cart.fill" catalog="system" id="Cdo-aC-UVi">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <segue destination="ho3-vS-fdd" kind="show" id="2gG-b1-GxA"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Item" image="bell.fill" catalog="system" id="7UU-nE-BNM">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="HomeCollectionView" destination="csv-mj-xBg" id="1E5-x9-Eda"/>
@@ -261,9 +273,15 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M9s-Zn-6F3">
-                                                <rect key="frame" x="37" y="994" width="380" height="59"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M9s-Zn-6F3">
+                                                <rect key="frame" x="37" y="982" width="380" height="59"/>
+                                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="59" id="FtE-1g-nsa"/>
+                                                    <constraint firstAttribute="width" constant="380" id="iXr-Ik-nVZ"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Add to Cart"/>
                                                 <connections>
                                                     <action selector="AddToCartButton:" destination="z5K-7f-MbB" eventType="touchUpInside" id="Vik-U7-cjv"/>
@@ -273,6 +291,8 @@
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1061" id="4bP-Eh-3mE"/>
+                                            <constraint firstAttribute="bottom" secondItem="M9s-Zn-6F3" secondAttribute="bottom" constant="20" id="6BN-bJ-fK6"/>
+                                            <constraint firstItem="M9s-Zn-6F3" firstAttribute="centerX" secondItem="zD6-iP-jkF" secondAttribute="centerX" id="YIa-YT-7H3"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -294,9 +314,22 @@
                             <constraint firstItem="385-bl-Gdm" firstAttribute="leading" secondItem="rF6-6m-Et5" secondAttribute="leading" id="fSV-ZR-uUd"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="u80-bc-dXJ"/>
+                    <navigationItem key="navigationItem" id="u80-bc-dXJ">
+                        <rightBarButtonItems>
+                            <barButtonItem title="Item" image="cart.fill" catalog="system" id="2DU-um-l2A">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <segue destination="ho3-vS-fdd" kind="show" id="yEM-kX-ZlB"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Item" image="bell.fill" catalog="system" id="zsV-GC-4rg">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
                     <size key="freeformSize" width="414" height="1200"/>
                     <connections>
+                        <outlet property="AddToCartButtonStyle" destination="M9s-Zn-6F3" id="GgE-gv-Bkb"/>
                         <outlet property="ProductCategoryLabel" destination="Pp4-h2-TYW" id="FPz-zF-IwG"/>
                         <outlet property="ProductDescriptionLabel" destination="guA-T9-Bi3" id="Rou-A8-k9Q"/>
                         <outlet property="ProductImageView" destination="EHg-01-rc6" id="I6i-Xj-ml5"/>
@@ -394,6 +427,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="wZa-p9-575">
                         <barButtonItem key="rightBarButtonItem" title="Check Out" id="bfs-Zo-GZ9">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="CheckOutButton:" destination="ho3-vS-fdd" id="8XM-6g-pep"/>
                             </connections>
@@ -415,6 +449,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.92600322310000005" green="0.31968667569999998" blue="0.2426259294" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="QHV-3c-c4B" kind="relationship" relationship="viewControllers" id="2nM-MG-aNc"/>
@@ -429,11 +466,18 @@
         <scene sceneID="sCP-ZC-k6I">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QHV-3c-c4B" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" id="AbM-k4-g9I"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" selectedImage="house.fill" id="AbM-k4-g9I">
+                        <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="94A-aL-ac3">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.92600322314822447" green="0.31968667573869258" blue="0.24262592939078831" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -448,11 +492,18 @@
         <scene sceneID="lhW-U4-qqT">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="em2-ey-p7B" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Category" id="IkF-3b-QgA"/>
+                    <tabBarItem key="tabBarItem" title="Category" image="tag" catalog="system" selectedImage="tag.fill" id="IkF-3b-QgA">
+                        <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ket-2v-qjJ">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.92600322310000005" green="0.31968667569999998" blue="0.2426259294" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -465,11 +516,20 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="o5f-7z-kVa"/>
+        <segue reference="2gG-b1-GxA"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="bell.fill" catalog="system" width="128" height="124"/>
+        <image name="cart.fill" catalog="system" width="128" height="102"/>
+        <image name="house" catalog="system" width="128" height="106"/>
+        <image name="house.fill" catalog="system" width="128" height="106"/>
+        <image name="tag" catalog="system" width="128" height="119"/>
+        <image name="tag.fill" catalog="system" width="128" height="119"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

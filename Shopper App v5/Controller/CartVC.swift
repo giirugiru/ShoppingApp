@@ -21,6 +21,13 @@ class CartVC: UIViewController {
         
         let alert = UIAlertController(title: "Check Out", message: "Do you want to check out your items?", preferredStyle: .alert)
         
+        let alertSuccess = UIAlertController(title: "Check Out Successful", message: "", preferredStyle: .alert)
+        
+        alertSuccess.addAction(UIAlertAction(title: "Ok", style: .default, handler: { action in
+
+        }))
+        
+        
         alert.addAction(UIAlertAction(title: "No", style: .default, handler: { action in
                 self.CartCollectionView.reloadData()
         }))
@@ -28,6 +35,7 @@ class CartVC: UIViewController {
         alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { action in
                 shoppingCart.removeAll()
                 self.CartCollectionView.reloadData()
+                self.present(alertSuccess, animated: true, completion: nil)
         }))
         
         self.present(alert, animated: true, completion: nil)

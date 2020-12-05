@@ -10,6 +10,7 @@
 		BA0207AC257B5DAE00603E42 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0207AB257B5DAE00603E42 /* DetailVC.swift */; };
 		BA0207AF257B748A00603E42 /* CartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0207AE257B748A00603E42 /* CartVC.swift */; };
 		BA0207B2257B74A100603E42 /* CartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0207B1257B74A100603E42 /* CartCell.swift */; };
+		BAD2AD58257BF16100FD4001 /* readme.md in Resources */ = {isa = PBXBuildFile; fileRef = BAD2AD57257BF16100FD4001 /* readme.md */; };
 		BAE55BA7257B18D50003F2A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE55BA6257B18D50003F2A6 /* AppDelegate.swift */; };
 		BAE55BA9257B18D50003F2A6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE55BA8257B18D50003F2A6 /* SceneDelegate.swift */; };
 		BAE55BAB257B18D50003F2A6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE55BAA257B18D50003F2A6 /* ViewController.swift */; };
@@ -28,6 +29,7 @@
 		BA0207AB257B5DAE00603E42 /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 		BA0207AE257B748A00603E42 /* CartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartVC.swift; sourceTree = "<group>"; };
 		BA0207B1257B74A100603E42 /* CartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartCell.swift; sourceTree = "<group>"; };
+		BAD2AD57257BF16100FD4001 /* readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
 		BAE55BA3257B18D50003F2A6 /* Shopper App v5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Shopper App v5.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAE55BA6257B18D50003F2A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BAE55BA8257B18D50003F2A6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 		BAE55B9A257B18D50003F2A6 = {
 			isa = PBXGroup;
 			children = (
+				BAD2AD57257BF16100FD4001 /* readme.md */,
 				BAE55BA5257B18D50003F2A6 /* Shopper App v5 */,
 				BAE55BA4257B18D50003F2A6 /* Products */,
 			);
@@ -177,6 +180,7 @@
 			files = (
 				BAE55BB6257B18D70003F2A6 /* LaunchScreen.storyboard in Resources */,
 				BAE55BB3257B18D70003F2A6 /* Assets.xcassets in Resources */,
+				BAD2AD58257BF16100FD4001 /* readme.md in Resources */,
 				BAE55BAE257B18D50003F2A6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

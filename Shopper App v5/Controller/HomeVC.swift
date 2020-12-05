@@ -30,7 +30,7 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Home Cell", for: indexPath) as! HomeCell
         cell.HomeProductImage.image = UIImage(named: productName[indexPath.row])
         cell.HomeProductLabel.text = productName[indexPath.row]
-        cell.HomePriceLabel.text = "\(productPrice[indexPath.row])"
+        cell.HomePriceLabel.text = "Rp. \(productPrice[indexPath.row])"
         
         return cell
     }
