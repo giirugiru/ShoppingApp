@@ -49,5 +49,18 @@ extension CategoryVC: UICollectionViewDelegate, UICollectionViewDataSource, UICo
             return CGSize(width: size, height: size) 
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if let destination = segue.destination as? CategoryItemsVC, let index = CategoryCollectionView.indexPathsForSelectedItems?.first {
+            
+            destination.selectedCategory = categoryData[index.row]
+        }
+        
+    }
+    
     
 }
