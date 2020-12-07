@@ -41,6 +41,8 @@ extension CategoryItemsVC: UICollisionBehaviorDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Category Items Cell", for: indexPath) as! CategoryItemsCell
         cell.ProductImage.image = UIImage(named: productName[product[indexPath.row]])
+        cell.ProductNameLabel.text = productName[product[indexPath.row]]
+        cell.ProductPriceLabel.text = "\(productPrice[product[indexPath.row]])"
         
         return cell
     }
